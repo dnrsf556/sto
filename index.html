@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>СТО на сто - Автосервис</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-wrapper">
+                <img src="машинка.png" alt="Автомобиль">
+                <h1 class="site-title">СТО на сто</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2 class="pppp">Доверь нам свою машину!</h2>
+                <button type="button">Написать</button>
+            </div>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="слайд1.png" alt="Слайд 1" class="slide active">
+                    <img src="слайд2.png" alt="Слайд 2" class="slide">
+                    <img src="слайд3.png" alt="Слайд 3" class="slide">
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы - профессиональный автосервис с многолетним опытом работы. Наши специалисты помогут решить любые проблемы с вашим автомобилем.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <div id="countdown-timer">
+                <div class="timer-block">
+                    <span id="days" class="timer-number">06</span>
+                    <span class="timer-label">дней</span>
+                </div>
+                <span class="timer-separator"></span>
+                <div class="timer-block">
+                    <span id="hours" class="timer-number">14</span>
+                    <span class="timer-separator">:</span>
+                    <span id="minutes" class="timer-number">45</span>
+                    <span class="timer-separator">:</span>
+                    <span id="seconds" class="timer-number">55</span>
+                </div>
+            </div>
+            <h2>Акция!</h2>
+            <p>Привези машину на тех. осмотр, получи замену масла в подарок!</p>
+        </section>
+
+        <hr>
+
+        <section id="reviews">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-header">
+                        <img src="ава.png" alt="Аватар" class="review-avatar">
+                        <p class="review-author">Иван</p>
+                        <div class="star-rating">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Отличный сервис, быстро устранили проблему!"</p>
+                </div>
+
+                <div class="review">
+                    <div class="review-header">
+                        <img src="ава.png" alt="Аватар" class="review-avatar">
+                        <p class="review-author">Ольга</p>
+                        <div class="star-rating">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Качественный ремонт по разумной цене."</p>
+                </div>
+
+                <div class="review">
+                    <div class="review-header">
+                        <img src="ава.png" alt="Аватар" class="review-avatar">
+                        <p class="review-author">Алексей</p>
+                        <div class="star-rating">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Вежливый персонал и профессиональный подход."</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="workflow-section">
+            <h3>Схема работы</h3>
+            <div class="workflow-steps">
+                <div class="steps-numbers">
+                    <div class="step-number">1</div>
+                    <div class="step-number">2</div>
+                    <div class="step-number">3</div>
+                    <div class="step-number">4</div>
+                    <div class="step-number">5</div>
+                </div>
+                <div class="steps-descriptions">
+                    <div class="step-description">Приём заявки и диагностика</div>
+                    <div class="step-description">Согласование работ и стоимости</div>
+                    <div class="step-description">Выполнение ремонта/обслуживания</div>
+                    <div class="step-description">Контроль качества и тестирование</div>
+                    <div class="step-description">Выдача автомобиля и оплата</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="services">
+            <h3>Услуги</h3>
+            <table class="services-table">
+              <tbody>
+                <tr>
+                  <td>Тех. обслуживание</td>
+                  <td>Комплексное плановое ТО вашего автомобиля по регламенту производителя. Наши специалисты выполнят полную диагностику всех систем, заменят масло и фильтры, проверят технические жидкости, ходовую часть, тормозную систему и электрооборудование. Регулярное обслуживание каждые 10–15 тыс. км пробега обеспечит надежную работу вашего авто и предотвратит преждевременный износ деталей.</td>
+                  <td><button type="button">Написать</button></td>
+                </tr>
+                <tr>
+                  <td>Диагностика автомобиля</td>
+                  <td>Комплексная проверка всех систем вашего автомобиля с использованием современного диагностического оборудования. Наши специалисты точно определят состояние двигателя, электронных систем, ходовой части и других узлов, выявят скрытые неисправности и дадут рекомендации по ремонту. Полная диагностика позволяет своевременно обнаружить проблемы, избежать дорогостоящего ремонта и обеспечить безопасность на дороге. Доверьте диагностику профессионалам — мы поможем сохранить исправность вашего авто.</td>
+                  <td><button type="button">Написать</button></td>
+                </tr>
+                <tr>
+                  <td>Ремонт двигателя</td>
+                  <td>Качественный ремонт двигателя любой сложности с гарантией выполненных работ. Наши мастера выполнят диагностику, замену изношенных деталей, ремонт ГРМ, устранение течей масла и другие работы по восстановлению работоспособности мотора. Используем оригинальные запчасти и профессиональное оборудование, чтобы вернуть вашему двигателю оптимальную мощность и надежность. Доверьте ремонт профессионалам — мы продлим жизнь вашему автомобилю и обеспечим его бесперебойную работу.</td>
+                  <td><button type="button">Написать</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+    </main>
+
+    <footer>
+        <h4>© 2025 СТО на сто. Все права защищены.</h4>
+        <h4>Контактный телефон: +7 (XXX) XXX-XX-XX</h4>
+    </footer>
+
+    <script>
+        // Функция для обновления таймера
+        function updateCountdown() {
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            
+            let days = 6;
+            let hours = 14;
+            let minutes = 45;
+            let seconds = 55;
+            
+            function formatTime(time) {
+                return time < 10 ? `0${time}` : time;
+            }
+            
+            const countdown = setInterval(() => {
+                seconds--;
+                
+                if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) {
+                    clearInterval(countdown);
+                    document.getElementById('countdown-timer').innerHTML = "Акция завершена!";
+                    return;
+                }
+                
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                
+                if (hours < 0) {
+                    hours = 23;
+                    days--;
+                }
+                
+                daysElement.textContent = formatTime(days);
+                hoursElement.textContent = formatTime(hours);
+                minutesElement.textContent = formatTime(minutes);
+                secondsElement.textContent = formatTime(seconds);
+            }, 1000);
+        }
+        
+        // Переменные для слайдера
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        let slideInterval;
+        
+        // Функция для показа слайда
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Функция для следующего слайда
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+            resetInterval();
+        }
+        
+        // Функция для предыдущего слайда
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+            resetInterval();
+        }
+        
+        // Функция для сброса интервала автопереключения
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Инициализация слайдера
+        function initSlider() {
+            showSlide(currentSlide);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Запускаем функции при загрузке страницы
+        window.onload = function() {
+            updateCountdown();
+            initSlider();
+        };
+    </script>
+</body>
+</html>
